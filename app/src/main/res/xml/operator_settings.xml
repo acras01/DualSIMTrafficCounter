@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceScreen
+        android:title="@string/name_sim1"
+        android:key="sim1" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+            android:key="auto1"
+            android:title="@string/auto_name_text"
+            android:defaultValue="true"
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
+            android:disableDependentsState="true" />
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+            android:key="name1"
+            android:inputType="text"
+            android:title="@string/name_text"
+            android:dependency="auto1"
+            android:summary="" />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/name_sim2"
+        android:key="sim2" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+            android:key="auto2"
+            android:title="@string/auto_name_text"
+            android:defaultValue="true"
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
+            android:disableDependentsState="true" />
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+            android:key="name2"
+            android:inputType="text"
+            android:title="@string/name_text"
+            android:dependency="auto2"
+            android:summary="" />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/name_sim3"
+        android:key="sim3" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+            android:key="auto3"
+            android:title="@string/auto_name_text"
+            android:defaultValue="true"
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
+            android:disableDependentsState="true" />
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+            android:key="name3"
+            android:inputType="text"
+            android:title="@string/name_text"
+            android:dependency="auto3"
+            android:summary="" />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/show_logo"
+        android:key="logo" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+            android:key="operator_logo"
+            android:title="@string/show_logo_in_statusbar"
+            android:summaryOn="@string/on"
+            android:summaryOff="@string/off"
+            android:defaultValue="false"/>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+            android:key="operator_logo1"
+            android:dependency="operator_logo"
+            android:title="@string/operator_logo_1"
+            android:entries="@array/logo"
+            android:entryValues="@array/logo_values"
+            android:defaultValue="none"/>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+            android:key="operator_logo2"
+            android:dependency="operator_logo"
+            android:title="@string/operator_logo_2"
+            android:entries="@array/logo"
+            android:entryValues="@array/logo_values"
+            android:defaultValue="none"/>
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+            android:key="operator_logo3"
+            android:dependency="operator_logo"
+            android:title="@string/operator_logo_3"
+            android:entries="@array/logo"
+            android:entryValues="@array/logo_values"
+            android:defaultValue="none"/>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:title="@string/ask_for_logo"
+            android:summary="@string/ask_for_logo_sum">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="mailto:acras1@gmail.com?subject=Add logo of my operator">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+    </PreferenceScreen>
+
+</PreferenceScreen>

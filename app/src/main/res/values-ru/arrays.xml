@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="measure">
+        <item>кБ</item>
+        <item>МБ</item>
+        <item>ГБ</item>
+    </string-array>
+    <string-array name="period">
+        <item>День</item>
+        <item>Месяц</item>
+        <item>Пользов.</item>
+    </string-array>
+    <string-array name="floating">
+        <item>Трафик</item>
+        <item>Скорость</item>
+        <item>Все</item>
+    </string-array>
+    <string-array name="limit">
+        <item>день</item>
+        <item>мес.</item>
+    </string-array>
+    <string-array name="icons">
+        <item>Нет</item>
+        <item>Автомат.</item>
+        <item>3Mob</item>
+        <item>AT&amp;T</item>
+        <item>Билайн</item>
+        <item>Bouygues Telecom</item>
+        <item>China Mobile</item>
+        <item>China Telecom</item>
+        <item>China Unicom</item>
+        <item>Cosmote</item>
+        <item>Djuice</item>
+        <item>France Telecom</item>
+        <item>Kcell</item>
+        <item>Киевстар</item>
+        <item>Lifecell</item>
+        <item>Life:)</item>
+        <item>Мегафон</item>
+        <item>Motiv</item>
+        <item>МТС</item>
+        <item>O2</item>
+        <item>O!</item>
+        <item>Orange</item>
+        <item>Play</item>
+        <item>Ростелеком</item>
+        <item>Смартс</item>
+        <item>Tele2</item>
+        <item>T-Mobile</item>
+        <item>Turkcell</item>
+        <item>Velcom</item>
+        <item>Verizon</item>
+        <item>Vodafone</item>
+        <item>Yota</item>
+        <item>Пользов.</item>
+    </string-array>
+    <string-array name="logo">
+        <item>Нет</item>
+        <item>Автомат.</item>
+        <item>3Mob</item>
+        <item>AT&amp;T</item>
+        <item>Билайн</item>
+        <item>Bouygues Telecom</item>
+        <item>China Mobile</item>
+        <item>China Telecom</item>
+        <item>China Unicom</item>
+        <item>Cosmote</item>
+        <item>Djuice</item>
+        <item>France Telecom</item>
+        <item>Kcell</item>
+        <item>Киевстар</item>
+        <item>Lifecell</item>
+        <item>Life:)</item>
+        <item>Мегафон</item>
+        <item>Motiv</item>
+        <item>МТС</item>
+        <item>O2</item>
+        <item>O!</item>
+        <item>Orange</item>
+        <item>Play</item>
+        <item>Ростелеком</item>
+        <item>Смартс</item>
+        <item>Tele2</item>
+        <item>T-Mobile</item>
+        <item>Turkcell</item>
+        <item>Velcom</item>
+        <item>Verizon</item>
+        <item>Vodafone</item>
+        <item>Yota</item>
+    </string-array>
+    <string-array name="onoff">
+        <item>Откл. и вкл.</item>
+        <item>Только откл.</item>
+        <item>Только вкл.</item>
+        <item>Не использ.</item>
+    </string-array>
+    <string-array name="onoff_LP">
+        <item>Только откл.</item>
+        <item>Не использ.</item>
+    </string-array>
+    <string-array name="measure_calls">
+        <item>1 секунда</item>
+        <item>1 минута</item>
+    </string-array>
+    <string-array name="duration">
+        <item>секунды</item>
+        <item>минуты</item>
+    </string-array>
+</resources>

@@ -1,0 +1,217 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/rl1"
+        android:visibility="visible">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontalScrollView"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableLayout"
+                android:visibility="visible">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/outgoing_duration"
+                        android:id="@+id/totalText"
+                        android:layout_column="1"
+                        android:gravity="center|fill_vertical"
+                        android:width="300dp"
+                        android:textSize="14sp"
+                        android:visibility="visible"
+                        android:textColor="?android:attr/textColorPrimary" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sim1row"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SIM1"
+                        android:id="@+id/sim1_name"
+                        android:layout_column="0"
+                        android:gravity="left|center_vertical"
+                        android:visibility="visible"
+                        android:width="125dp"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Tot1"
+                        android:layout_column="1"
+                        android:gravity="center_vertical|center"
+                        android:width="300dp"
+                        android:visibility="visible"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/limit1_calls"
+                        android:layout_column="2"
+                        android:visibility="visible"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reset"
+                        android:id="@+id/buttonClear1"
+                        android:layout_column="3"
+                        android:visibility="visible"
+                        style="?android:attr/buttonStyleSmall" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sim2row"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SIM2"
+                        android:id="@+id/sim2_name"
+                        android:layout_column="0"
+                        android:gravity="left|center_vertical"
+                        android:visibility="visible"
+                        android:width="125dp"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Tot2"
+                        android:layout_column="1"
+                        android:gravity="center_vertical|center"
+                        android:width="300dp"
+                        android:visibility="visible"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/limit2_calls"
+                        android:layout_column="2"
+                        android:visibility="visible"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reset"
+                        android:id="@+id/buttonClear2"
+                        android:layout_column="3"
+                        android:visibility="visible"
+                        style="?android:attr/buttonStyleSmall" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sim3row"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SIM3"
+                        android:id="@+id/sim3_name"
+                        android:layout_column="0"
+                        android:gravity="left|center_vertical"
+                        android:visibility="visible"
+                        android:width="125dp"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:id="@+id/Tot3"
+                        android:layout_column="1"
+                        android:gravity="center_vertical|center"
+                        android:width="300dp"
+                        android:visibility="visible"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/limit3_calls"
+                        android:layout_column="2"
+                        android:visibility="visible"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/reset"
+                        android:id="@+id/buttonClear3"
+                        android:layout_column="3"
+                        android:visibility="visible"
+                        style="?android:attr/buttonStyleSmall" />
+
+                </TableRow>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip_calls"
+            android:id="@+id/tip"
+            android:layout_below="@+id/horizontalScrollView"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="visible"
+            android:textColor="?android:attr/textColorPrimary" />
+
+    </RelativeLayout>
+
+</ScrollView>

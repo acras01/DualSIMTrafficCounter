@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ics_blue">#33b5e5</color>
+    <string name="close">Close</string>
+    <string name="corner">Corner</string>
+    <string name="hide">Hide</string>
+    <string name="maximize">Maximize</string>
+    <string name="window_icon">Window icon</string>
+</resources>

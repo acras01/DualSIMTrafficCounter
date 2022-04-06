@@ -1,0 +1,938 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ua.od.acros.dualsimtrafficcounter.activities.TrafficWidgetConfigActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView" >
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/activesimlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/only_active"
+                    android:id="@+id/activsimtv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/activesim" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/activesim"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/activesim_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/activsimtv"
+                    android:layout_toLeftOf="@+id/activesim" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/showSim"
+                android:clickable="false">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/choose_sim"
+                    android:id="@+id/simChoose"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/simChooseSum"
+                    android:layout_below="@+id/simChoose"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/nameslayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_names"
+                    android:id="@+id/namestv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/names" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/names"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/names_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/namestv"
+                    android:layout_toLeftOf="@+id/names" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/info_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_full_text_on_widget"
+                    android:id="@+id/infotv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/all"
+                    android:id="@+id/info_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_below="@+id/infotv"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rxtx_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_rx_tx"
+                    android:id="@+id/rx_txtv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/used"
+                    android:id="@+id/rx_tx_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_below="@+id/rx_txtv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/remain_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_remaining_widget"
+                    android:id="@+id/remaintv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/used"
+                    android:id="@+id/remain_data_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_below="@+id/remaintv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/minus_layout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_minus"
+                    android:id="@+id/minustv"
+                    android:layout_toLeftOf="@+id/minus"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/minus"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/used"
+                    android:id="@+id/minus_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/minus"
+                    android:layout_below="@+id/minustv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/simFontSize"
+                android:clickable="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_size"
+                    android:id="@+id/textSize"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/textSizeSum"
+                    android:layout_below="@+id/textSize"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/iconslayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_icons"
+                    android:id="@+id/iconstv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/icons" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/icons"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/icons_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/icons"
+                    android:layout_below="@+id/iconstv" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/simLogoSize"
+                android:clickable="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/icon_size"
+                    android:id="@+id/iconSize"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/iconSizeSum"
+                    android:layout_below="@+id/iconSize"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/logoLayout1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/operator_logo_1"
+                    android:id="@+id/logoText1"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/logoPreview1" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/logoPreview1"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/logoSum1"
+                    android:layout_below="@+id/logoText1"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/logoPreview1"/>
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/logoLayout2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/operator_logo_2"
+                    android:id="@+id/logoText2"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_toLeftOf="@+id/logoPreview2"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/logoPreview2"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/logoSum2"
+                    android:layout_toLeftOf="@+id/logoPreview2"
+                    android:layout_below="@+id/logoText2"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/logoLayout3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/operator_logo_3"
+                    android:id="@+id/logoText3"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_toLeftOf="@+id/logoPreview3"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/logoPreview3"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="TODO" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/logoSum3"
+                    android:layout_below="@+id/logoText3"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/logoPreview3"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/speedlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_speed"
+                    android:id="@+id/speedtv"
+                    android:layout_alignRight="@+id/speed"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speed"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/speed_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignRight="@+id/speed"
+                    android:layout_below="@+id/speedtv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/speedFontSize"
+                android:clickable="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_size"
+                    android:id="@+id/speedTextSize"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/speedTextSizeSum"
+                    android:layout_below="@+id/speedTextSize"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/speedArrowsSize"
+                android:clickable="false">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/icon_size"
+                    android:id="@+id/speedIconsSize"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="None"
+                    android:id="@+id/speedIconsSizeSum"
+                    android:layout_below="@+id/speedIconsSize"
+                    android:layout_alignParentStart="true"
+                    android:clickable="false"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/textColorLayout"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_color"
+                    android:id="@+id/textColor"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/textColorPreview" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/textColorPreview"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    android:contentDescription="TODO" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/textColorLayout1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_color_tx"
+                    android:id="@+id/textColor1"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/textColorPreview1" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/textColorPreview1"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    android:contentDescription="TODO" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/textColorLayout2"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_color_rx"
+                    android:id="@+id/textColor2"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/textColorPreview2" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/textColorPreview2"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    android:contentDescription="TODO" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/textColorLayout3"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/text_color_tot"
+                    android:id="@+id/textColor3"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/textColorPreview3" />
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/textColorPreview3"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    android:contentDescription="TODO" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/backlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/use_background"
+                    android:id="@+id/backtv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/useBack"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/useBack"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/back_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/useBack"
+                    android:layout_below="@+id/backtv" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/backColorLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/background_color"
+                    android:id="@+id/backgroundColor"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/backColorPreview"/>
+
+                <ImageView
+                    android:layout_width="@dimen/logo_size"
+                    android:layout_height="@dimen/logo_size"
+                    android:id="@+id/backColorPreview"
+                    android:scaleType="fitXY"
+                    android:maxHeight="@dimen/logo_size"
+                    android:maxWidth="@dimen/logo_size"
+                    android:minHeight="@dimen/logo_size"
+                    android:minWidth="@dimen/logo_size"
+                    android:layout_alignParentEnd="true"
+                    android:src="@android:drawable/ic_menu_preferences"
+                    android:contentDescription="TODO" />
+
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/dividerlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/use_divider"
+                    android:id="@+id/dividertv"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/divider" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/divider"
+                    android:checked="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/divider_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/divider"
+                    android:layout_below="@+id/dividertv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/daynightlayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/show_daynight_icons"
+                    android:id="@+id/daynighttv"
+                    android:layout_toLeftOf="@+id/daynight_icons"
+                    android:layout_alignParentStart="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/daynight_icons"
+                    android:checked="true"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/on"
+                    android:id="@+id/daynight_icons_summary"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_toLeftOf="@+id/daynight_icons"
+                    android:layout_below="@+id/daynighttv"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

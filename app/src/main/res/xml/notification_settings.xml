@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Preference
+        android:key="ringtone"
+        android:title="@string/set_ringtone"
+        android:showDefault="true"
+        android:showSilent="true"
+        android:ringtoneType="notification"
+        android:summary="@string/set_ringtone_summary" />
+
+    <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+        android:key="vibrate"
+        android:title="@string/use_vibration"
+        android:defaultValue="true"
+        android:summary="@string/use_vibration_summary"/>
+
+</PreferenceScreen>

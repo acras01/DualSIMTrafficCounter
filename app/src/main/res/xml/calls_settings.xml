@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+        android:key="calls_reset"
+        android:title="@string/show_reset_notification"
+        android:defaultValue="false"
+        android:summaryOn="@string/on"
+        android:summaryOff="@string/off" />
+
+    <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineCheckPreference
+        android:key="save_profiles_calls"
+        android:title="@string/save_profile_known"
+        android:defaultValue="false"
+        android:summaryOn="@string/on"
+        android:summaryOff="@string/off" />
+
+    <PreferenceScreen
+        android:title="@string/sim1_limit"
+        android:key="calls_sim1" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix
+            android:title="@string/limit_settings" >
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_limit1"
+                android:inputType="numberDecimal"
+                android:title="@string/limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/measure_calls"
+                android:entryValues="@array/values"
+                android:key="calls_op_value1"
+                android:summary=""
+                android:title="@string/tariffication" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_round1"
+                android:inputType="numberDecimal"
+                android:defaultValue="10"
+                android:title="@string/time_before_limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TimePreference
+                android:key="calls_time1"
+                android:dialogLayout="@layout/time_preference"
+                android:title="@string/time_of_end"/>
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/period"
+                android:entryValues="@array/three_values"
+                android:key="calls_period1"
+                android:summary=""
+                android:title="@string/period_value" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_day1"
+                android:inputType="number"
+                android:defaultValue="1"
+                android:title="@string/day"
+                android:summary="" />
+
+        </ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim1_white"
+            android:title="@string/white_list"
+            android:summary="@string/view_white_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.MyListActivity"
+                android:data="0">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim1_black"
+            android:title="@string/black_list"
+            android:summary="@string/view_black_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.BlackListActivity"
+                android:data="0">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/sim2_limit"
+        android:key="calls_sim2" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix
+            android:title="@string/limit_settings" >
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_limit2"
+                android:inputType="numberDecimal"
+                android:title="@string/limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/measure_calls"
+                android:entryValues="@array/values"
+                android:key="calls_op_value2"
+                android:summary=""
+                android:title="@string/tariffication" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_round2"
+                android:inputType="numberDecimal"
+                android:defaultValue="10"
+                android:title="@string/time_before_limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TimePreference
+                android:key="calls_time2"
+                android:dialogLayout="@layout/time_preference"
+                android:title="@string/time_of_end"/>
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/period"
+                android:entryValues="@array/three_values"
+                android:key="calls_period2"
+                android:summary=""
+                android:title="@string/period_value" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_day2"
+                android:inputType="number"
+                android:defaultValue="1"
+                android:title="@string/day"
+                android:summary="" />
+
+        </ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim2_white"
+            android:title="@string/white_list"
+            android:summary="@string/view_white_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.MyListActivity"
+                android:data="1">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim2_black"
+            android:title="@string/black_list"
+            android:summary="@string/view_black_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.BlackListActivity"
+                android:data="1">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/sim3_limit"
+        android:key="calls_sim3" >
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix
+            android:title="@string/limit_settings" >
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_limit3"
+                android:inputType="numberDecimal"
+                android:title="@string/limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/measure_calls"
+                android:entryValues="@array/values"
+                android:key="calls_op_value3"
+                android:summary=""
+                android:title="@string/tariffication" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_round3"
+                android:inputType="numberDecimal"
+                android:defaultValue="10"
+                android:title="@string/time_before_limit"
+                android:summary="" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TimePreference
+                android:key="calls_time3"
+                android:dialogLayout="@layout/time_preference"
+                android:title="@string/time_of_end"/>
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineListPreference
+                android:defaultValue="0"
+                android:entries="@array/period"
+                android:entryValues="@array/three_values"
+                android:key="calls_period3"
+                android:summary=""
+                android:title="@string/period_value" />
+
+            <ua.od.acros.dualsimtrafficcounter.preferences.TwoLineEditTextPreference
+                android:key="calls_day3"
+                android:inputType="number"
+                android:defaultValue="1"
+                android:title="@string/day"
+                android:summary="" />
+
+        </ua.od.acros.dualsimtrafficcounter.preferences.PreferenceCategoryFix>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim3_white"
+            android:title="@string/white_list"
+            android:summary="@string/view_white_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.MyListActivity"
+                android:data="2">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+        <ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference
+            android:key="calls_sim3_black"
+            android:title="@string/black_list"
+            android:summary="@string/view_black_list">
+            <intent
+                android:targetPackage="ua.od.acros.dualsimtrafficcounter"
+                android:targetClass="ua.od.acros.dualsimtrafficcounter.activities.BlackListActivity"
+                android:data="2">
+            </intent>
+        </ua.od.acros.dualsimtrafficcounter.preferences.TwoLinePreference>
+
+    </PreferenceScreen>
+
+</PreferenceScreen>

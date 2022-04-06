@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="?attr/actionBarSize"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_weight=".9">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_sim"
+                android:id="@+id/choosesim"
+                android:layout_alignParentTop="true"
+                android:minLines="2"
+                android:maxLines="4"
+                android:maxWidth="@dimen/text_width"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignLeft="@+id/rl"
+                android:textColor="?android:attr/textColorPrimary" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/choosesim"
+                android:weightSum="1"
+                android:id="@+id/rl">
+
+                <include layout="@layout/sim_radiogroup"
+                    android:id="@+id/sim_group"/>
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tableLayout2"
+                    android:layout_weight=".6"
+                    android:layout_marginLeft="16dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/day"
+                            android:layout_column="2"
+                            android:gravity="center_vertical|center"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:id="@+id/night"
+                            android:layout_column="3"
+                            android:gravity="center_vertical|center"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tableRow"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="@string/transmitted"
+                            android:id="@+id/txText"
+                            android:width="80dp"
+                            android:layout_column="1"
+                            android:gravity="left|center_vertical"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="0"
+                            android:id="@+id/tx"
+                            android:gravity="center_vertical|center"
+                            android:layout_column="2"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="0"
+                            android:id="@+id/txnight"
+                            android:gravity="center_vertical|center"
+                            android:layout_column="3"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tableRow2"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="@string/received"
+                            android:id="@+id/rxText"
+                            android:layout_column="1"
+                            android:width="80dp"
+                            android:gravity="left|center_vertical"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="0"
+                            android:id="@+id/rx"
+                            android:layout_column="2"
+                            android:gravity="center_vertical|center"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:text="0"
+                            android:id="@+id/rxnight"
+                            android:width="100dp"
+                            android:layout_column="3"
+                            android:gravity="center_vertical|center"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tableRow3"
+                        android:layout_marginTop="10dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                            android:id="@+id/totText"
+                            android:layout_column="1"
+                            android:gravity="left|center_vertical"
+                            android:width="80dp"
+                            android:textSize="14sp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/total"
+                            android:layout_column="2"
+                            android:gravity="center_vertical|center"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/totalnight"
+                            android:layout_column="3"
+                            android:gravity="center_vertical|center"
+                            android:width="100dp"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ProgressBar
+                style="@android:style/Widget.DeviceDefault.ProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerInParent="true" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_date"
+                android:id="@+id/setdate"
+                android:layout_centerHorizontal="true"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_below="@+id/rl" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/calculate"
+        android:id="@+id/buttonOK"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_gravity="bottom"
+        android:layout_weight=".1" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

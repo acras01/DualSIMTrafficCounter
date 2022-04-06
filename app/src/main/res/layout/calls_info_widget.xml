@@ -1,0 +1,221 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/widgetLayout" >
+
+    <ImageView
+        android:id="@+id/background"
+        android:src="@drawable/info_widget_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitXY"
+        android:contentDescription="TODO">
+    </ImageView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center"
+        android:weightSum="1"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/simLayout1"
+            android:gravity="center|center_horizontal"
+            android:layout_weight=".3333333333333333333">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo1"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/operSIM1"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/logo1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/totSIM1"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/stub1"
+            android:src="@drawable/widget_divider"
+            android:contentDescription="TODO" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/simLayout2"
+            android:gravity="center|center_horizontal"
+            android:layout_weight=".3333333333333333333">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo2"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/operSIM2"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/logo2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/totSIM2"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/stub2"
+            android:src="@drawable/widget_divider"
+            android:contentDescription="TODO" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:id="@+id/simLayout3"
+            android:gravity="center|center_horizontal"
+            android:layout_weight=".3333333333333333333">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo3"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="TODO" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/operSIM3"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="right"
+                android:layout_centerVertical="true"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/logo3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/totSIM3"
+                android:layout_gravity="center"
+                android:textSize="@dimen/widget_text_size"
+                android:textColor="@color/widget_text"
+                android:typeface="normal"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:gravity="right"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

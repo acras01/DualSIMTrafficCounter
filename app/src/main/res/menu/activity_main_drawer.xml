@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_traffic_menu"
+            android:title="@string/traffic">
+            <menu>
+                <item android:id="@+id/nav_traffic"
+                    android:title="@string/notification_title"
+                    android:checkable="true" />
+                <item android:id="@+id/nav_test"
+                    android:title="@string/action_show_test"
+                    android:checkable="true" />
+                <item android:id="@+id/nav_traf_for_date"
+                    android:title="@string/action_show_history"
+                    android:checkable="true" />
+                <item android:id="@+id/nav_set_usage"
+                    android:title="@string/action_set_usage"
+                    android:checkable="true" />
+            </menu>
+        </item>
+        <item android:id="@+id/nav_calls_menu"
+            android:title="@string/calls">
+            <menu>
+                <item android:id="@+id/nav_calls"
+                    android:title="@string/calls_fragment"
+                    android:checkable="true"/>
+                <item android:id="@+id/nav_set_duration"
+                    android:title="@string/action_set_duration"
+                    android:checkable="true" />
+            </menu>
+        </item>
+    </group>
+
+    <item android:title="@string/others">
+        <menu>
+            <item android:id="@+id/nav_settings"
+                android:checkable="false"
+                android:title="@string/action_settings" />
+            <item android:id="@+id/nav_email"
+                android:checkable="false"
+                android:title="@string/send_email" />
+            <item android:id="@+id/nav_4pda"
+                android:checkable="false"
+                android:title="@string/visit_4pda" />
+            <item android:id="@+id/nav_exit"
+                android:checkable="false"
+                android:title="@string/exit" />
+        </menu>
+    </item>
+
+</menu>

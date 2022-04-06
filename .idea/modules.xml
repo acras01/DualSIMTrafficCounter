@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DualSIMTrafficCounter.iml" filepath="$PROJECT_DIR$/DualSIMTrafficCounter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/RootShell/DualSIMTrafficCounter.RootShell.iml" filepath="$PROJECT_DIR$/.idea/modules/RootShell/DualSIMTrafficCounter.RootShell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/XposedBridge/DualSIMTrafficCounter.XposedBridge.iml" filepath="$PROJECT_DIR$/.idea/modules/XposedBridge/DualSIMTrafficCounter.XposedBridge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/acra/DualSIMTrafficCounter.acra.iml" filepath="$PROJECT_DIR$/.idea/modules/acra/DualSIMTrafficCounter.acra.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ambilwarna/DualSIMTrafficCounter.ambilwarna.iml" filepath="$PROJECT_DIR$/.idea/modules/ambilwarna/DualSIMTrafficCounter.ambilwarna.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/DualSIMTrafficCounter.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/DualSIMTrafficCounter.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/standOut/DualSIMTrafficCounter.standOut.iml" filepath="$PROJECT_DIR$/.idea/modules/standOut/DualSIMTrafficCounter.standOut.iml" />
+    </modules>
+  </component>
+</project>

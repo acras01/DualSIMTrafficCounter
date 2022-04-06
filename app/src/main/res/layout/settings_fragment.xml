@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:id="@+id/notif_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:id="@+id/notif_touch_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/use_notification_title"
+                        android:id="@+id/notif_tv"
+                        android:layout_alignParentStart="true"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:text="@string/use_notification_summary"
+                        android:id="@+id/notif_sum"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/notif_tv"
+                        android:layout_alignParentStart="true"
+                        android:textColor="?android:attr/textColorPrimary" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/notif_sw"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/traff_layout"
+                android:layout_marginLeft="5dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/limit_title"
+                    android:id="@+id/traff_lim"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/limit_summary"
+                    android:id="@+id/traff_sum"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/traff_lim"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/calls_layout"
+                android:layout_marginLeft="5dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/calls_limit_title"
+                    android:id="@+id/calls_lim"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/calls_limit_summary"
+                    android:id="@+id/calls_sum"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/calls_lim"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/operator_layout"
+                android:layout_marginLeft="5dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/name_title"
+                    android:id="@+id/operator_sett"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/name_summary"
+                    android:id="@+id/operator_sum"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/operator_sett"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/widgets_layout"
+                android:layout_marginLeft="5dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/widgets_title"
+                    android:id="@+id/widgets_sett"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/widgets_summary"
+                    android:id="@+id/widgets_sum"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/widgets_sett"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/other_layout"
+                android:layout_marginLeft="5dp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/other_title"
+                    android:id="@+id/other_sett"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentTop="true"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/other_summary"
+                    android:id="@+id/other_sum"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/other_sett"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

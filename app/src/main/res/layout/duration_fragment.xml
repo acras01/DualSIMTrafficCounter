@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="?attr/actionBarSize">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_sim"
+        android:id="@+id/choosesim"
+        android:layout_alignParentTop="true"
+        android:minLines="2"
+        android:maxLines="4"
+        android:maxWidth="@dimen/text_width"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/sim_group"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:textColor="?android:attr/textColorPrimary" />
+
+    <include layout="@layout/sim_radiogroup"
+        android:id="@+id/sim_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choosesim" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/duration"
+        android:maxWidth="@dimen/input_width"
+        android:inputType="numberDecimal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:width="@dimen/input_width"
+        android:maxLines="1"
+        android:layout_below="@+id/sim_group" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:spinnerMode="dropdown"
+        android:layout_toRightOf="@+id/duration"
+        android:layout_alignBottom="@+id/duration"
+        android:entries="@array/duration"
+        android:minWidth="@dimen/spinner_width" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/set"
+        android:id="@+id/buttonOK"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/buttonBarButtonStyle" />
+
+</RelativeLayout>
